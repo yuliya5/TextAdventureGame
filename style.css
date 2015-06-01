@@ -1,0 +1,62 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html, body{
+	background-image: url("dark_alley.jpg");
+	height: 100%;
+	
+}
+
+.transbox{
+	width: 100%;
+	height: 15%;
+	background-color: #A60000;
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	background-image: url("weird-clock.jpg");
+	
+	
+}
+.text {
+    font-weight: bold;
+	color: white;
+	font-size: 70px;
+	text-align: center;
+
+	
+}
+
+.introduction{
+	font-size: 30px;
+	color: white;
+	width: 40%;
+	margin-left: 20px;
+	line-height: 30px;
+	text-align: justify;
+	margin-top: 30px;
+	
+}
+
+button { 
+	margin-top: 30px;
+	width: 15%;
+	height: 60px;
+	font-size: 20px;
+}
+
+#red {
+	background-color: #FF0000;
+	font-weight: bold;
+}
+
+#blue{
+	background-color: #3385FF;
+	font-weight: bold;
+}
+
+#yellow{
+	background-color: yellow;
+	font-weight: bold;
+}
