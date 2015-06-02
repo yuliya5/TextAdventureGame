@@ -30,7 +30,6 @@ var answer1 = console.log("Curious, you bend down to pick up the... (Type the nu
 		default: 
 			console.log("Hey crazy person. Pick 1, 2, or 3. Are you breaking the game on purpose?");
 	}
-	// Remove this comment
 	
 
 	function goToRed(){
