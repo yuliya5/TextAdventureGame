@@ -6,7 +6,7 @@ var question6;
 var question7;
 
 // var displayMessage = function (message) {
-// document.getElementById('messageContainer').innerHTML = message;
+// document.getElementById('messageContainer').innerHTML += message;
 // };
 
 console.log("You are walking home from work late in the evening. You decide to take a shortcut through a dark alley. In the back of the alley are three object glowing with mysterious colors. One glowing red appears to be a map, the second glowing blue appears to be a book, and the third glowing yellow appears to be an old style pistol.");
@@ -30,7 +30,7 @@ var answer1 = console.log("Curious, you bend down to pick up the... (Type the nu
 		default: 
 			console.log("Hey crazy person. Pick 1, 2, or 3. Are you breaking the game on purpose?");
 	}
-	// Remove me
+	
 	
 
 	function goToRed(){
@@ -51,7 +51,7 @@ var answer1 = console.log("Curious, you bend down to pick up the... (Type the nu
 		    	goToRome();
 		    }
 		    else{
-		    	prompt("Come on! Read what the game is asking you to do!");
+		    	displayMessage("Come on! Read what the game is asking you to do!");
 		    	doFirstPrompt();
 		    }
 		}
@@ -80,6 +80,7 @@ var answer1 = console.log("Curious, you bend down to pick up the... (Type the nu
 				var answerFountain = prompt("Careful! Water fountains in Italy are poisoned with love. Which magestic fountain would you rather drink from 1)Two Sea Horses or 2)Shell-Shaped Chariot?");
 					if(answerFountain === "1"){
 						prompt("Good choice! Abundance and wealth will be forever yours. The End.")
+					// 	displayMessage("<br><br>Good choice! Abundance and wealth will be forever yours. The End.");
 					}
 					else if(answerFountain === "2"){
 						prompt("Uh-ohs! Not your lucky choice. You are commissioned to bring water to Venice every day! The End.")
@@ -224,6 +225,115 @@ var answer1 = console.log("Curious, you bend down to pick up the... (Type the nu
 			}
 		}
 	}
+
+
+
+function goToBlue(){
+
+  var curious = prompt("You wake up in a field of flowers. There is adventure in every direction. You see the white rabbit go into a direction, will you be able to catch him? Pick one. : 1) North, 2) East, 3) South");
+
+  switch (curious) {
+    case "1":
+    goNorth();
+    break;
+    case "2":
+    goEast();
+    break;
+    case "3":
+    goSouth();
+    break;
+    default:
+    prompt("Sorry I didn't catch that, please reply again");
+    goToBlue();
+  }
+}
+
+function goNorth(){
+  var curiouser = prompt("You follow the white rabbit down a rabbit hole. Down, down, down! You fall and find yourself within a room with a small table with a small bottle with a label that says drink me, and a small plate of cookies with a label that says eat me. Are you hungry or thirsty: 1) Eat me!,  2) Drink me!");
+
+  if (curiouser ==="1"){
+    prompt("You've grown ten feet tall, you begin to cry and are swallowed up by yours tears and washed out of the house");
+    goToBlue();
+  }
+  else if (curiouser === "2"){
+    prompt("If you drink much from a bottle marked poison it is certain to disagree with you sooner or later.");
+  shrink(); 
+  }
+  else {
+    prompt("Sorry I didn't catch that, please reply again");
+  goNorth();
+  }
+}
+  
+
+  function shrink(){
+    var redQueen = prompt("You have found yourself in the Red Queen's garden. She has spotted you and challenged you to a game of croquet. But you also see the white rabbit dart by. What will you do? : 1) Catch that rabbit!,  2) Play against the Red Queen" );
+
+    if (redQueen ==="1"){
+      prompt("Off with your head!!!");
+      goToBlue();
+    }
+    else if (redQueen === "2")
+    { prompt("You have coquered the Red Queen at her own game!");
+   croquet(); }
+   else
+    {prompt("Sorry I didn't catch that, please reply again");
+  shrink();
+}
+
+  }
+
+  function croquet(){
+    
+    var queenAlice = prompt("You have conquered the Red Queen, the people of Wonderland have named you Queen Alice. What do you want to do as your first action as Queen Alice? : 1) Think of six impossible things before breakfast! 2) Go to a Mad Tea Party! ");
+
+    if (queenAlice ==="1")
+      {prompt("You can think of more impossible things, start over!");
+    goToBlue();
+      }
+      else if (queenAlice === "2")
+       { prompt("You turn down the path to go to the Mad Tea Party, you see the white rabbit and start to chase him, you trip and hit your head. You come to, and realize it was all a dream.");
+      shrink(); }
+      else
+        {prompt("Sorry I didn't catch that, please reply again");
+       goToBlue();
+ }
+}
+    function goEast(){
+    
+     var question2 = prompt("you are walking East down the yellow brickroad, when you come to a fork in the road. On the right side there is a field of poppies. On the left there is a dark forest. Which way do you wanna go?: left or right?");
+       if (question2 === 'left'){
+         prompt("You walk to the field of poppies and are overcome with exhaustion, you fall into an eternal asleep. No one every finds you. Your journey ends here..");
+       }
+       else if (question2 === 'right'){
+         goNorth();
+       }
+       else{
+         prompt("That was not an option!");
+       }
+     }
+   
+   function goSouth(){
+     doFirstPrompt();
+     function doFistPrompt(){
+       question3 = prompt("The strange light you decided to follow turned out to be alliens..ooo. The aliens have two spaceships, ones going to Mars and ones going to Venus. You have to pick a ship to go on. which on will it be?", "1 for Mars & 2 for Venus");
+       if (question3 === '1'){
+         prompt("You hop aboard the spaceship to Mars. Shortly after you get yo Mars, you realize that you had a one way ticket to be a test subjects for the Mars Mission. You will live out the rest of your days on Mars! Your journey ends here..");
+       }
+       else if(question3 === '2'){
+         prompt("You hop aboard the spaceship to Venus. Shortly after you get to Venus, you are forced into an arranged marriage with Buzz-Lightyear. Your journey ends here..");
+       }
+       else{
+         prompt("That was not an option!");
+       }
+     }
+   }
+
+
+
+
+
+
 
 
 
